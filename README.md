@@ -44,3 +44,15 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+## Records
+
+1. antd换肤[https://www.cnblogs.com/jkr666666/p/12885445.html]
+
+antd-theme-generator
+webpack-antd-theme-generator-plugin 
+
+2. typescript使用 react-loadable，需要引入`yarn add @types/react-loadable -S`
+
+
