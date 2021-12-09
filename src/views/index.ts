@@ -12,4 +12,11 @@ const Login = Loadable({
   loading: Loading,
 })
 
-export { Dashboard, Login }
+const Notification = Loadable({
+  loader: () => import('./Notification'),
+  loading: Loading,
+})
+
+const Settings = Loadable({ loader: () => import('./Settings'), loading: Loading })
+
+export { Dashboard, Login, Notification, Settings }
