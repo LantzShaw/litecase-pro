@@ -12,4 +12,6 @@ webpack-antd-theme-generator-plugin
 **组件化**
 **工程化**
 
+[![NPM version](https://img.shields.io/npm/v/litecase-design.svg?style=flat)](https://www.npmjs.com/package/litecase-design)
+
 <img src="https://img.shields.io/badge/litecase--pro-1.1.0-brightgreen" />
