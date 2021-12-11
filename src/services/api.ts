@@ -1,1 +1,1 @@
-export default {}
+import { get, post } from '@/services'
