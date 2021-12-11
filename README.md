@@ -12,4 +12,4 @@ webpack-antd-theme-generator-plugin
 **组件化**
 **工程化**
 
-https://img.shields.io/badge/litecase--pro-1.1.0-brightgreen
+<img src="https://img.shields.io/badge/litecase--pro-1.1.0-brightgreen" />
