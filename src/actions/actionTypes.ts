@@ -1,1 +1,13 @@
-export enum actionTypes {}
+// export enum actionTypes {
+//   'START_FETCH_NOTIFICATION',
+//   'START_NOTIFICATION_POST',
+//   'FINISH_NOTIFICATION_POST',
+// }
+
+const actionTypes = {
+  START_FETCH_NOTIFICATION: 'START_FETCH_NOTIFICATION',
+  START_NOTIFICATION_POST: 'START_NOTIFICATION_POST',
+  FINISH_NOTIFICATION_POST: 'FINISH_NOTIFICATION_POST',
+}
+
+export default actionTypes
