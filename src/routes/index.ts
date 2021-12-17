@@ -1,9 +1,9 @@
-import { Login, Dashboard, Settings } from '../views'
+import { SignIn, Dashboard, Settings } from '../views'
 
 export const mainRoute = [
   {
     pathname: '/login',
-    component: Login,
+    component: SignIn,
   },
   // {
   //     pathname: '/404',

@@ -1,13 +1,13 @@
 import { FC, ReactElement } from 'react'
 
-import Login from './views/Login'
+import SignIn from './views/SignIn'
 
 import './App.less'
 
 const App: FC = (): ReactElement => {
   return (
     <>
-      <Login />
+      <SignIn />
     </>
   )
 }

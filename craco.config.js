@@ -10,9 +10,14 @@ module.exports = {
       plugin: CracoAntDesignPlugin,
       options: {
         customizeTheme: {
-          '@primary-color': '#1DA57A',
+          '@primary-color': '#6877FF',
+          '@border-radius-base': '4px',
         },
       },
     },
   ],
 }
+
+// 707EFF
+// 1DA57A
+// 6877FF

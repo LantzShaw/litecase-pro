@@ -7,8 +7,8 @@ const Dashboard = Loadable({
   loading: Loading,
 })
 
-const Login = Loadable({
-  loader: () => import('./Login'),
+const SignIn = Loadable({
+  loader: () => import('./SignIn'),
   loading: Loading,
 })
 
@@ -19,4 +19,6 @@ const Notification = Loadable({
 
 const Settings = Loadable({ loader: () => import('./Settings'), loading: Loading })
 
-export { Dashboard, Login, Notification, Settings }
+const Home = Loadable({ loader: () => import('./Home'), loading: Loading })
+
+export { Dashboard, SignIn, Notification, Settings, Home }
