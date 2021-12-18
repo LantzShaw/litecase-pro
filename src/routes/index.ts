@@ -1,9 +1,15 @@
-import { SignIn, Dashboard, Settings } from '../views'
+import { SignIn, SignUp, Dashboard, Settings } from '../views'
 
 export const mainRoute = [
   {
-    pathname: '/login',
+    path: '/login',
+    name: 'SignIn',
     component: SignIn,
+  },
+  {
+    path: '/signUp',
+    name: 'SignUp',
+    component: SignUp,
   },
   // {
   //     pathname: '/404',

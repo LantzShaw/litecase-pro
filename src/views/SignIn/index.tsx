@@ -30,7 +30,7 @@ const SignIn: FC<IProps> = (): ReactElement => {
     <div className="login_wrapper">
       <div className="login_box">
         <div className="logo_wrapper">
-          <div className="logo">Logo</div>
+          <div className="logo">Litecase</div>
         </div>
         <Form layout="vertical" size="middle">
           <Form.Item label={<span style={{ fontWeight: 'bold', fontSize: '16px' }}>Email</span>}>
@@ -60,8 +60,15 @@ const SignIn: FC<IProps> = (): ReactElement => {
             </Row>
           </Form.Item>
           <Form.Item style={{ marginTop: '30px' }}>
-            <Button type="primary" htmlType="submit" size="large" block>
-              Sign in
+            <Button
+              type="primary"
+              htmlType="submit"
+              size="large"
+              block
+              loading={false}
+              disabled={false}
+            >
+              Sign in...
             </Button>
           </Form.Item>
         </Form>

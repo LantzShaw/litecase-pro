@@ -12,6 +12,11 @@ const SignIn = Loadable({
   loading: Loading,
 })
 
+const SignUp = Loadable({
+  loader: () => import('./SignUp'),
+  loading: Loading,
+})
+
 const Notification = Loadable({
   loader: () => import('./Notification'),
   loading: Loading,
@@ -21,4 +26,4 @@ const Settings = Loadable({ loader: () => import('./Settings'), loading: Loading
 
 const Home = Loadable({ loader: () => import('./Home'), loading: Loading })
 
-export { Dashboard, SignIn, Notification, Settings, Home }
+export { Dashboard, SignIn, Notification, Settings, Home, SignUp }
