@@ -26,4 +26,6 @@ const Settings = Loadable({ loader: () => import('./Settings'), loading: Loading
 
 const Home = Loadable({ loader: () => import('./Home'), loading: Loading })
 
-export { Dashboard, SignIn, Notification, Settings, Home, SignUp }
+const NotFound = Loadable({ loader: () => import('./NotFound'), loading: Loading })
+
+export { Dashboard, SignIn, Notification, Settings, Home, SignUp, NotFound }

@@ -1,20 +1,22 @@
-import { SignIn, SignUp, Dashboard, Settings } from '../views'
+import { SignIn, SignUp, Dashboard, Settings, NotFound } from '../views'
 
 export const mainRoute = [
   {
-    path: '/login',
+    path: '/member/login',
     name: 'SignIn',
     component: SignIn,
+    icon: '',
+    children: [],
   },
   {
-    path: '/signUp',
+    path: '/member/reg',
     name: 'SignUp',
     component: SignUp,
   },
-  // {
-  //     pathname: '/404',
-  //     component: NotFound
-  // }
+  {
+    pathname: '/404',
+    component: NotFound,
+  },
 ]
 
 // export const adminRoute = [

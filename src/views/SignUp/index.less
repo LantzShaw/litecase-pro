@@ -1,49 +1,17 @@
 @import '~antd/es/style/themes/default.less';
+@import '../SignIn/index.less';
 
-.register_wrapper {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  align-items: center;
-  // background: rgb(255, 255, 255);
-  // background: rgba(214, 228, 255, 0.5);
-  //   background: linear-gradient(to bottom right, rgb(240, 245, 255, 0.5), rgba(249, 240, 255, 0.5));
-  background: linear-gradient(to bottom right, rgba(255, 251, 230, 0.5), rgba(230, 255, 251, 0.5));
+.wrapper {
+  background: linear-gradient(to bottom right, rgba(230, 255, 251, 0.5), rgba(255, 251, 230, 0.5));
 
-  .register_box {
-    overflow: auto;
-    max-height: 90vh;
-    max-width: 90%;
-    box-sizing: border-box;
-    width: 450px;
-    // background: rgb(255, 255, 255);
+  .container {
+    width: 430px;
     background: linear-gradient(to left, rgba(255, 251, 230, 0.5), rgba(230, 255, 251, 0.5));
-    // background: linear-gradient(to left, rgba(249, 240, 255, 0.5), rgb(240, 245, 255, 0.5));
-    // background: linear-gradient(to left, rgba(255, 247, 230, 0.5), rgb(240, 245, 255, 0.5));
-    // background: linear-gradient(to left, rgba(246, 255, 237, 0.5), rgb(240, 245, 255, 0.5));
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 43px 7px;
-    border-radius: 9px;
-    border: none;
-    padding: 2rem;
 
-    .logo_wrapper {
+    .box {
       width: 100%;
-      //   margin-top: 1rem;
-      //   margin-bottom: 2rem;
       margin-top: 0.5rem;
       margin-bottom: 1.5rem;
-      text-align: center;
-
-      .logo {
-        width: '50%';
-        text-align: center;
-        margin: 'auto';
-        font-weight: bold;
-        font-size: 2rem;
-      }
     }
   }
 }

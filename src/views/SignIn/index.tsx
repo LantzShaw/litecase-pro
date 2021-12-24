@@ -1,6 +1,7 @@
 import { FC, ReactElement, useEffect } from 'react'
 import classNames from 'classnames'
 import { Form, Input, Button, Space, Divider, Checkbox, Row, Col, Typography } from 'antd'
+import { Link } from 'react-router-dom'
 
 import {
   GithubOutlined,
@@ -9,13 +10,9 @@ import {
   WeiboCircleOutlined,
 } from '@ant-design/icons'
 
-// TODO: How to fix this problem?
-// import styles from './index.less'
-// console.log('styles', styles) // => {}
+import styles from './index.less'
 
-import './index.less'
-
-const { Link, Text } = Typography
+const { Text } = Typography
 
 interface IProps {}
 
@@ -27,10 +24,10 @@ const SignIn: FC<IProps> = (): ReactElement => {
   useEffect(() => {}, [])
 
   return (
-    <div className="login_wrapper">
-      <div className="login_box">
-        <div className="logo_wrapper">
-          <div className="logo">Litecase</div>
+    <div className={styles.wrapper}>
+      <div className={styles.container}>
+        <div className={styles.box}>
+          <div className={styles.logo}>Litecase</div>
         </div>
         <Form layout="vertical" size="middle">
           <Form.Item label={<span style={{ fontWeight: 'bold', fontSize: '16px' }}>Email</span>}>
@@ -53,7 +50,7 @@ const SignIn: FC<IProps> = (): ReactElement => {
                 <Checkbox checked={true}>Remember me</Checkbox>
               </Col>
               <Col>
-                <Link href="https://ant.design" target="_blank">
+                <Link to="/" target="_blank">
                   Forgot password?
                 </Link>
               </Col>
@@ -72,10 +69,8 @@ const SignIn: FC<IProps> = (): ReactElement => {
             </Button>
           </Form.Item>
         </Form>
-        <Text>Dont't have an account? </Text>
-        <Link href="https://ant.design" target="_blank">
-          Sign up
-        </Link>
+        <Text>Don't have an account? </Text>
+        <Link to="/orgz/member/reg">Sign up</Link>
         <Divider plain>or</Divider>
         {/* <Button
           style={{ marginTop: '10px' }}
@@ -100,10 +95,10 @@ const SignIn: FC<IProps> = (): ReactElement => {
         <div style={{ marginTop: '28px' }}>
           <Space>
             <Text>Login with :</Text>
-            <Link>
+            <Link to="/">
               <WechatOutlined style={{ fontSize: '24px', color: '#389e0d' }} />
             </Link>
-            <Link>
+            <Link to="/">
               <WeiboCircleOutlined style={{ fontSize: '24px', color: '#faad14' }} />
             </Link>
           </Space>
