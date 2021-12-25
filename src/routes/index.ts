@@ -1,4 +1,4 @@
-import { SignIn, SignUp, Dashboard, Settings, NotFound } from '../views'
+import { SignIn, SignUp, Home, Settings, NotFound } from '../views'
 
 export const mainRoute = [
   {
