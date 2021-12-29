@@ -16,6 +16,19 @@ webpack-antd-theme-generator-plugin
 
 <img src="https://img.shields.io/badge/litecase--pro-1.1.0-brightgreen" />
 
+
+```js
+    localStorage.setItem('ACCESS_TOKEN', 'mysecret')
+    const token = localStorage.getItem('ACCESS_TOKEN')
+```
+
+```sh
+    以前是TSD，现在是TSM（TypeScript Definition Manager） .d.ts 管理已经全面转向 Typings (已废弃) 、 DefinitelyTyped
+
+
+    data.d.ts 或者 index.d.ts
+```
+
 ## Questions
 
 1. React.StrictMode是什么
@@ -87,4 +100,27 @@ import { Home, NotFound, SignIn, SignUp } from './views'
     </Route>
     </Routes>
 </Router>
+```
+
+10. 通过类的方式封装axios
+```js
+    class httpClient {
+
+    }
+
+    const http = new httpClient()
+
+
+
+
+
+    // typescript axios 封装通用返回值类型
+    https://www.jianshu.com/p/2f3867f86237
+```
+
+11. 
+```sh
+   React.ReactElement
+    React.ReactNode
+    React.CSSProperties
 ```

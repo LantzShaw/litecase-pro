@@ -2,12 +2,7 @@ import { FC, ReactElement } from 'react'
 import { Form, Input, Button, Space, Divider, Checkbox, Row, Col, Typography } from 'antd'
 import { Link } from 'react-router-dom'
 
-import {
-  GithubOutlined,
-  GoogleCircleFilled,
-  WechatOutlined,
-  WeiboCircleOutlined,
-} from '@ant-design/icons'
+import { GithubOutlined, WechatOutlined, WeiboCircleOutlined } from '@ant-design/icons'
 
 import { UserForm } from '../../components'
 

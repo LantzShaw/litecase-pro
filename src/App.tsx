@@ -5,8 +5,6 @@ import { useRoutes } from 'react-router-dom'
 import UserLayout from './layouts/UserLayout'
 import { Home, NotFound, SignIn, SignUp } from './views'
 
-import './App.less'
-
 const routes: RouteObject[] = [
   { path: '/', element: <Home /> },
   {
