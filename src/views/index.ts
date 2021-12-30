@@ -12,15 +12,34 @@ const SignUp = Loadable({
   loading: Loading,
 })
 
+const Home = Loadable({
+  loader: () => import('./Home'),
+  loading: Loading,
+})
+
 const Notification = Loadable({
   loader: () => import('./Notification'),
   loading: Loading,
 })
 
-const Settings = Loadable({ loader: () => import('./Settings'), loading: Loading })
+const Settings = Loadable({
+  loader: () => import('./Settings'),
+  loading: Loading,
+})
 
-const Home = Loadable({ loader: () => import('./Home'), loading: Loading })
+const NotFound = Loadable({
+  loader: () => import('./Exception/404'),
+  loading: Loading,
+})
 
-const NotFound = Loadable({ loader: () => import('./NotFound'), loading: Loading })
+const Forbidden = Loadable({
+  loader: () => import('./Exception/403'),
+  loading: Loading,
+})
 
-export { SignIn, Notification, Settings, Home, SignUp, NotFound }
+const ServerException = Loadable({
+  loader: () => import('./Exception/500'),
+  loading: Loading,
+})
+
+export { SignIn, Notification, Settings, Home, SignUp, NotFound, Forbidden, ServerException }

@@ -124,3 +124,9 @@ import { Home, NotFound, SignIn, SignUp } from './views'
     React.ReactNode
     React.CSSProperties
 ```
+
+12. 
+```jsx
+
+import type { TableListItem } from './data.d' // 这里不能.ts
+```

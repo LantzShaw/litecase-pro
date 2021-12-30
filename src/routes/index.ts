@@ -1,4 +1,4 @@
-import { SignIn, SignUp, Home, Settings, NotFound } from '../views'
+import { SignIn, SignUp, Home, Settings } from '../views'
 
 export const mainRoute = [
   {
@@ -13,10 +13,10 @@ export const mainRoute = [
     name: 'SignUp',
     component: SignUp,
   },
-  {
-    pathname: '/404',
-    component: NotFound,
-  },
+  // {
+  //   pathname: '/404',
+  //   component: NotFound,
+  // },
 ]
 
 // export const adminRoute = [

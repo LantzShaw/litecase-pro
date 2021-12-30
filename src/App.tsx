@@ -2,11 +2,25 @@ import { FC, ReactElement } from 'react'
 import type { RouteObject } from 'react-router-dom'
 import { useRoutes } from 'react-router-dom'
 
+import BaseLayout from './layouts/BaseLayout'
 import UserLayout from './layouts/UserLayout'
-import { Home, NotFound, SignIn, SignUp } from './views'
+import { Home, Settings, SignIn, SignUp, NotFound } from './views'
 
 const routes: RouteObject[] = [
-  { path: '/', element: <Home /> },
+  {
+    path: '/',
+    element: <BaseLayout />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: '/settings',
+        element: <Settings />,
+      },
+    ],
+  },
   {
     path: 'orgz/member',
     element: <UserLayout />,
