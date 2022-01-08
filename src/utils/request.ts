@@ -50,7 +50,7 @@ const request = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
-  withCredentials: true,
+  withCredentials: false, // 是否有证书，
   timeout: 30000,
 })
 

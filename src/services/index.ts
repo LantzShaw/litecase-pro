@@ -1,31 +1,63 @@
-// import { stringify } from 'qs'
-// import request from '@/utils/request'
+/**
+ * @Author Lantz
+ * @Date 2022.01.07
+ * @Email lantzshaw@163.com
+ */
 
-// // const delay = (ms) =>
-// //   new Promise((resolve) => {
-// //     setTimeout(resolve, ms);
-// //   });
+import request from '../utils/request'
 
-// /**
-//  * get
-//  * @param {*} params
-//  */
-// export async function get(params: any) {
-//   return request({
-//     url: `/xxxxxxx.html?${stringify(params)}`,
-//   })
-// }
+/**
+ * GET
+ * @param {String} url
+ * @param {Object} params
+ * @return {Promise<Object>} Promise
+ */
+export async function get(url: string, params: any) {
+  return request({
+    url: url,
+    params: params,
+    method: 'GET',
+  })
+}
 
-// /**
-//  * post
-//  * @param {*} params
-//  */
-// export async function post(params: any) {
-//   return request({
-//     url: `/xxxxxxx.html`,
-//     method: 'post',
-//     data: params,
-//   })
-// }
+/**
+ * POST
+ * @param {String} url
+ * @param {Object} params
+ * @return {Promise<Object>} Promise
+ */
+export async function post(url: string, params: any) {
+  return request({
+    url: url,
+    method: 'POST',
+    data: params,
+  })
+}
 
-export {}
+/**
+ * PUT
+ * @param {String} url
+ * @param {Object} params
+ * @return {Promise<Object>} Promise
+ */
+export async function put(url: string, params: any) {
+  return request({
+    url: url,
+    method: 'PUT',
+    data: params,
+  })
+}
+
+/**
+ * DELETE
+ * @param {String} url
+ * @param {Object} params
+ * @return {Promise<Object>} Promise
+ */
+export async function del(url: string, params: any) {
+  return request({
+    url: url,
+    method: 'DELETE',
+    params: params,
+  })
+}
