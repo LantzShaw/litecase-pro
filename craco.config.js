@@ -2,11 +2,17 @@
  * 此文件好像不能换成.ts后缀的文件
  */
 
+const path = require('path')
 const CracoAntDesignPlugin = require('craco-antd')
 // const CracoLessPlugin = require('craco-less')
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent')
 
 module.exports = {
+  webpack: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   plugins: [
     {
       plugin: CracoAntDesignPlugin,

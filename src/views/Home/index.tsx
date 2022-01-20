@@ -1,20 +1,16 @@
 import { FC, ReactElement, useEffect } from 'react'
 
-import { get } from '../../services'
-
 import type { TableListItem } from './data.d'
+
+import { getUsers } from '@/services/api'
 
 export type HomeProps = {}
 
 const Home: FC<HomeProps> = (props): ReactElement => {
-  const getData = () => {
-    get('/user', { name: 'lantz' }).then(res => {
-      console.log('', res)
-    })
-  }
-
   useEffect(() => {
-    getData()
+    // getUsers({}).then(res => {
+    //   console.log('res', res)
+    // })
   }, [])
 
   return (

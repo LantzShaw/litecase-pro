@@ -29,6 +29,33 @@ webpack-antd-theme-generator-plugin
     data.d.ts 或者 index.d.ts
 ```
 
+3. tsconfig设置`@`别名， 由于`react-script 4.0.3`会自动删除`paths`设置项, so 当前的解决方案是, create a new file   `tsconfig.base.json`, then we can set `extends`
+
+> 参考文章 https://github.com/facebook/create-react-app/issues/8909
+
+**create-react-app**
+
+```json
+    "paths": {
+    "@/*": ["./src/*"],
+  }
+
+  {
+    "extends": "./tsconfig.base.json"
+}
+```
+
+**cra-customize**
+```js
+    // craco.config.js
+    webpack: {
+        alias: {
+        '@': path.resolve(__dirname, './src'),
+        },
+    },
+```
+
+
 ## Questions
 
 1. React.StrictMode是什么
