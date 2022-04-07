@@ -1,14 +1,21 @@
-import actionTypes from '../actions/actionTypes'
+import type { NotificationAction } from '@/actions/notification'
+import type { NotificationState } from '@/types/notification'
 
-const initialState = {
-  isLoading: false,
+const initialState: NotificationState = {
   list: [],
+  isLoading: false,
 }
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default (state = initialState, action: any) => {
+export default function notification(state = initialState, action: NotificationAction) {
   switch (action.type) {
     default:
       return state
   }
 }
+
+// export function notification (state = initialState, action: Action)  {
+//   switch (action.type) {
+//     default:
+//       return state
+//   }
+// }

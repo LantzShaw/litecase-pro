@@ -16,5 +16,5 @@ ReactDOM.render(
       </Router>
     </Provider>
   </ConfigProvider>,
-  document.getElementById('root')
+  document.getElementById('root') as HTMLElement
 )

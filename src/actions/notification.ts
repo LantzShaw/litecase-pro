@@ -1,25 +1,49 @@
-import actionTypes from './actionTypes'
+import { actionTypes } from '@/constants'
 
 // import { getNotifications } from '../services'
 
-const startNotificationPost = () => {
+export type StartNotificationPost = {
+  type: actionTypes.START_NOTIFICATION_POST
+}
+
+export type FinishNotificationPost = {
+  type: actionTypes.FINISH_NOTIFICATION_POST
+}
+
+export type StartFetchNotification = {
+  type: actionTypes.START_FETCH_NOTIFICATION
+  payload: any
+}
+
+export type NotificationAction =
+  | StartNotificationPost
+  | FinishNotificationPost
+  | StartFetchNotification
+
+const startNotificationPost = (): NotificationAction => {
   return {
     type: actionTypes.START_NOTIFICATION_POST,
   }
 }
 
-const finishNotificationPost = () => {
+const finishNotificationPost = (): NotificationAction => {
   return {
     type: actionTypes.FINISH_NOTIFICATION_POST,
   }
 }
 
-export const increase = () => {
+export const increase = (): NotificationAction => {
   return {
     type: actionTypes.START_FETCH_NOTIFICATION,
     payload: {},
   }
 }
+
+// export const decrease = (): Action => {
+//   return {
+//     type: ActionTypes.FINISH_FETCH_NOTIFICATION,
+//     payload: {},
+// }
 
 // export const fetchNotifications = id => {
 // return dispatch => {
@@ -27,7 +51,7 @@ export const increase = () => {
 
 //     getNotifications().then(res => {
 //         dispatch({
-//             type: actionTypes.FETCH_NOTIFICATIONS,
+//             type: ActionTypes.FETCH_NOTIFICATIONS,
 //             payload: {
 //                 list: res.list
 //             }

@@ -181,3 +181,17 @@ import type { TableListItem } from './data.d' // 这里不能.ts
 首页
 
 上传
+
+支付
+
+权限
+
+数据字典
+
+
+### vim 的使用
+
+https://www.cnblogs.com/intelwisd/p/14655593.html
+https://www.jianshu.com/p/41c759d543b7
+https://www.jianshu.com/p/cbfa86c8d8a5
+https://www.runoob.com/linux/linux-vim.html
