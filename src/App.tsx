@@ -2,9 +2,9 @@ import { FC, ReactElement } from 'react'
 import type { RouteObject } from 'react-router-dom'
 import { useRoutes } from 'react-router-dom'
 
-import BaseLayout from './layouts/BaseLayout'
-import UserLayout from './layouts/UserLayout'
-import { Home, Settings, SignIn, SignUp, NotFound } from './views'
+import BaseLayout from '@/layouts/BaseLayout'
+import UserLayout from '@/layouts/UserLayout'
+import { Home, Settings, Notification, SignIn, SignUp, NotFound } from '@/views'
 
 const routes: RouteObject[] = [
   {
@@ -18,6 +18,10 @@ const routes: RouteObject[] = [
       {
         path: '/settings',
         element: <Settings />,
+      },
+      {
+        path: '/notification',
+        element: <Notification />,
       },
     ],
   },

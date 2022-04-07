@@ -1,6 +1,8 @@
+import type { Dispatch } from 'redux'
+
 import { actionTypes } from '@/constants'
 
-// import { getNotifications } from '../services'
+import { getNotifications } from '@/services/user'
 
 export type StartNotificationPost = {
   type: actionTypes.START_NOTIFICATION_POST
@@ -8,17 +10,10 @@ export type StartNotificationPost = {
 
 export type FinishNotificationPost = {
   type: actionTypes.FINISH_NOTIFICATION_POST
-}
-
-export type StartFetchNotification = {
-  type: actionTypes.START_FETCH_NOTIFICATION
   payload: any
 }
 
-export type NotificationAction =
-  | StartNotificationPost
-  | FinishNotificationPost
-  | StartFetchNotification
+export type NotificationAction = StartNotificationPost | FinishNotificationPost
 
 const startNotificationPost = (): NotificationAction => {
   return {
@@ -26,36 +21,27 @@ const startNotificationPost = (): NotificationAction => {
   }
 }
 
-const finishNotificationPost = (): NotificationAction => {
+const finishNotificationPost = (payload: any): NotificationAction => {
   return {
     type: actionTypes.FINISH_NOTIFICATION_POST,
+    payload,
   }
 }
 
-export const increase = (): NotificationAction => {
-  return {
-    type: actionTypes.START_FETCH_NOTIFICATION,
-    payload: {},
+/**
+ * Aysnc action creator
+ *
+ * @returns {Promise<void>}
+ *
+ * You can use async action creator to fetch data from server.
+ */
+
+export const fetchNotification = () => {
+  return (dispatch: Dispatch) => {
+    dispatch(startNotificationPost())
+
+    getNotifications({}).then(res => {
+      dispatch(finishNotificationPost(res.data.list))
+    })
   }
 }
-
-// export const decrease = (): Action => {
-//   return {
-//     type: ActionTypes.FINISH_FETCH_NOTIFICATION,
-//     payload: {},
-// }
-
-// export const fetchNotifications = id => {
-// return dispatch => {
-//     dispatch(startNotificationPost())
-
-//     getNotifications().then(res => {
-//         dispatch({
-//             type: ActionTypes.FETCH_NOTIFICATIONS,
-//             payload: {
-//                 list: res.list
-//             }
-//         })
-//     })
-// }
-// }

@@ -2,10 +2,10 @@ import { EnthusiasmAction } from '@/actions/enthusiasm'
 import type { EnthusiasmState } from '@/types/enthusiasm'
 import { INCREMENT_ENTHUSIASM, DECREMENT_ENTHUSIASM } from '@/constants/actionTypes'
 
-const initialState: EnthusiasmState = {
+const initialState = {
   languageName: '',
   enthusiasmLevel: 0,
-}
+} as EnthusiasmState
 
 export default function enthusiasm(
   state = initialState,
