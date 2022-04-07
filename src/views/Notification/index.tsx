@@ -40,7 +40,7 @@ import { FC, ReactElement } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
 import type { RootState, AppDispatch } from '@/store'
-import type { NotificationAction } from '@/actions/notification'
+import { fetchNotification } from '@/actions/notification'
 
 export type NoticeIconData = {
   avatar?: string | React.ReactNode
@@ -61,7 +61,7 @@ const Notification: FC = (): ReactElement => {
   console.log(selectNotification)
 
   const clickHandler = () => {
-    // dispatch(startFetchNotification())
+    dispatch(fetchNotification())
   }
 
   return <div>Notification</div>
