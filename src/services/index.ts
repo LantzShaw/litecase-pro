@@ -4,7 +4,7 @@
  * @Email lantzshaw@163.com
  */
 
-import request from '../utils/request'
+import request from '@/utils/request'
 
 /**
  * GET

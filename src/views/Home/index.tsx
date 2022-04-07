@@ -2,7 +2,7 @@ import { FC, ReactElement, useEffect } from 'react'
 
 import type { TableListItem } from './data.d'
 
-import { getUsers } from '@/services/api'
+import { getUsers } from '@/services/user'
 
 export type HomeProps = {}
 
