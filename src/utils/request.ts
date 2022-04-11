@@ -1,5 +1,5 @@
 // import axios, { AxiosResponse, AxiosRequestConfig, AxiosInstance, AxiosPromise } from 'axios'
-import axios, { AxiosResponse, AxiosRequestConfig } from 'axios'
+import axios, { AxiosResponse, AxiosRequestConfig, AxiosInstance } from 'axios'
 import { stringify } from 'qs'
 import { notification } from 'antd'
 
@@ -45,7 +45,7 @@ const checkStatus = (response: AxiosResponse) => {
 }
 
 // 创建axios实例
-const request = axios.create({
+const axiosInstance: AxiosInstance = axios.create({
   baseURL: API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ const request = axios.create({
 })
 
 // 请求拦截器
-request.interceptors.request.use(
+axiosInstance.interceptors.request.use(
   (config: AxiosRequestConfig) => {
     // 取消上一次未完成的相同请求，注意项目中是否存在风险
     cancelHttp(config)
@@ -86,7 +86,7 @@ request.interceptors.request.use(
 )
 
 // 响应拦截器
-request.interceptors.response.use(
+axiosInstance.interceptors.response.use(
   (response: AxiosResponse) => {
     cancelHttp(response.config)
 
@@ -103,7 +103,7 @@ request.interceptors.response.use(
   }
 )
 
-export default request
+export default axiosInstance
 
 // const err = (error) => {
 //   if (error.response) {

@@ -156,6 +156,9 @@ import { Home, NotFound, SignIn, SignUp } from './views'
 ```jsx
 
 import type { TableListItem } from './data.d' // 这里不能.ts
+
+// 好像也可以直接写成这样
+import type { TableListItem } from './data' 
 ```
 
 13. 请求
@@ -195,3 +198,27 @@ https://www.cnblogs.com/intelwisd/p/14655593.html
 https://www.jianshu.com/p/41c759d543b7
 https://www.jianshu.com/p/cbfa86c8d8a5
 https://www.runoob.com/linux/linux-vim.html
+
+
+```tsx
+const Login  = React.lazy(() => import('@/views/Login'))
+
+// 通过<Suspense>路由页面加载时自定义loading
+<Suspense fallback={<h2>Loading...</h2>}>
+    <Router>
+        <Routes path="/login" element={<Login />} >
+    </Router>
+</Suspense>
+```
+
+
+```sh
+useEffect相当于：
+componentDidMount()
+compoentDidUpdate()
+componentWillUnmount()
+```
+
+边界
+
+@rescripts/cli

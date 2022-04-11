@@ -1,5 +1,27 @@
-import { get, post, put, del } from '@/services'
+// import { get, post, put, del } from '@/services'
 
-export const getNotifications = (params: any) => get('/notifications', params)
+// export const getNotifications = (params: any) => get('/notifications', params)
 
-export const getUsers = (params: any) => get('/users', params)
+// export const getUsers = (params: any) => get('/users', params)
+
+import http from '@/utils/http'
+
+enum Api {
+  Login = '/login',
+  Logout = '/logout',
+  GetUserInfo = '/getUserInfo',
+  GetPermCode = '/getPermCode',
+}
+
+export type LoginParams = {
+  username: string
+  password: string
+}
+
+export type LoginModel = {
+  username: string
+  email: string
+}
+
+export const getUsers = (params: LoginParams) => http.get<LoginModel>({ url: Api.Login, params })
+export const addUser = (params: any) => http.post<void>({ url: Api.Login, params })
