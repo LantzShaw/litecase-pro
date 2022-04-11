@@ -1,5 +1,5 @@
 /**
- * 此文件好像不能换成.ts后缀的文件
+ * @description 此文件好像不能换成.ts后缀的文件
  */
 
 const path = require('path')

@@ -25,3 +25,4 @@ export type LoginModel = {
 
 export const getUsers = (params: LoginParams) => http.get<LoginModel>({ url: Api.Login, params })
 export const addUser = (params: any) => http.post<void>({ url: Api.Login, params })
+export const getNotifications = (params: any) => http.get({ url: '/notifications', params })

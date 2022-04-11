@@ -222,3 +222,33 @@ componentWillUnmount()
 边界
 
 @rescripts/cli
+
+
+由于react-redux不兼容react18,在使用Provider时会 'Provider' cannot be used as a JSX component #1886
+
+
+在package.json文件中设置一个就行，然后再运行`yarn install`
+```json
+ "resolutions": {
+    "**/@types/react": "^18.0.0"
+  },
+  "overrides": {
+    "@types/react": "17.0.43",
+    "@types/react-dom": "17.0.14"
+  },
+```
+```json
+<!-- If you're using Yarn: -->
+
+  "resolutions": {
+    "@types/react": "^16 || ^17"
+  }
+<!-- If you're using npm: -->
+
+  "overrides": {
+    "@types/react": "^16 || ^17"
+  }
+```
+
+
+参考文章: https://github.com/reduxjs/react-redux/issues/1886

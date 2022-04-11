@@ -21,9 +21,8 @@
     "@types/lodash-es": "^4.17.6",
     "@types/node": "^12.0.0",
     "@types/qs": "^6.9.7",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
     "@types/react-loadable": "^5.5.6",
+    "@types/react-redux": "^7.1.23",
     "antd": "^4.17.2",
     "axios": "^0.24.0",
     "classnames": "^2.3.1",
@@ -32,11 +31,11 @@
     "css-loader": "^6.5.1",
     "lodash-es": "^4.17.21",
     "qs": "^6.10.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "react-loadable": "^5.5.0",
     "react-loadable-ts-transformer": "^0.0.5",
-    "react-redux": "^7.2.6",
+    "react-redux": "^7.2.8",
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
     "redux": "^4.1.2",
@@ -56,6 +55,13 @@
       "react-app/jest"
     ]
   },
+  "resolutions": {
+    "**/@types/react": "^18.0.0"
+  },
+  "overrides": {
+    "@types/react": "17.0.43",
+    "@types/react-dom": "17.0.14"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -68,5 +74,8 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/react": "^18.0.1",
+    "@types/react-dom": "^18.0.0"
+  }
 }

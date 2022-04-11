@@ -1,9 +1,10 @@
-import { FC, ReactElement } from 'react'
+import { FC, ReactElement, ReactNode } from 'react'
 
 import styles from './index.less'
 
 export type UserFormProps = {
   name: string
+  children: ReactNode
 }
 
 const UserForm: FC<UserFormProps> = (props): ReactElement => {
