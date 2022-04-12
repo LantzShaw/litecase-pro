@@ -17,7 +17,7 @@ const element = (
   </ConfigProvider>
 )
 
-const container: HTMLElement = document.getElementById('root') as HTMLElement
+const container = document.getElementById('root') as HTMLElement
 const root = createRoot(container)
 
 root.render(element)

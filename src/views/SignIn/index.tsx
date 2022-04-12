@@ -6,6 +6,8 @@ import { GithubOutlined, WechatOutlined, WeiboCircleOutlined } from '@ant-design
 
 import { UserForm } from '../../components'
 
+import './index.less'
+
 const { Text } = Typography
 
 export type SignInProps = {}

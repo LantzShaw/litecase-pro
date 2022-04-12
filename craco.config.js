@@ -7,6 +7,8 @@ const CracoAntDesignPlugin = require('craco-antd')
 // const CracoLessPlugin = require('craco-less')
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent')
 
+const { getLessVars } = require('antd-theme-generator')
+
 module.exports = {
   webpack: {
     alias: {
@@ -20,10 +22,11 @@ module.exports = {
         // less loader optoins
         lessLoaderOptions: {
           lessOptions: {
-            modifyVars: {
-              '@primary-color': '#6877FF',
-              '@border-radius-base': '4px',
-            },
+            // modifyVars: {
+            //   '@primary-color': '#6877FF',
+            //   '@border-radius-base': '4px',
+            // },
+            modifyVars: getLessVars(path.join(__dirname, './src/styles/vars.less')),
             javascriptEnabled: true,
             sourceMap: false,
           },

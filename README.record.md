@@ -252,3 +252,42 @@ componentWillUnmount()
 
 
 参考文章: https://github.com/reduxjs/react-redux/issues/1886
+
+
+
+**eslint配置文件**
+ 
+
+插件包名的格式一般是eslint-plugin-<plugin-name>，就像 eslint-plugin-prettier；
+也可能是含命名空间包的格式@<scope>/eslint-plugin-<plugin-name>，例如 @vue/eslint-config-prettier；
+甚至 @<scope>/eslint-plugin，如@jquery/eslint-plugin。
+
+参考文章: https://www.jianshu.com/p/6254093f846c
+
+```js
+// .eslintrc.js
+
+// eslint-plugin-html可以解决html文件eslint报错的问题
+module.exports = {
+  "plugin": ["eslint-plugin-html"]
+}
+```
+
+
+**window上挂属性**
+
+需要在全局生命文件中声明Window类型
+
+```ts
+interface Window {
+  less: any
+}
+```
+
+**color.toHSL is not a function**
+```sh
+是因为能重写一些样式造成的，修改vars.less
+```
+
+**antd-theme-generator**
+刷新页面样式会重置

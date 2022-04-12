@@ -50,6 +50,10 @@ declare module 'react-fittext'
 declare module 'bizcharts-plugin-slider'
 declare type Recordable<T = any> = Record<string, T>
 
+interface Window {
+  less: any
+}
+
 // declare module '*.less' {
 //   const classes: { [key: string]: string }
 //   export default classes
