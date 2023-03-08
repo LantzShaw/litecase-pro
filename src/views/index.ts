@@ -22,6 +22,11 @@ const Notification = Loadable({
   loading: Loading,
 })
 
+const DataView = Loadable({
+  loader: () => import('./DataView'),
+  loading: Loading,
+})
+
 const Settings = Loadable({
   loader: () => import('./Settings'),
   loading: Loading,
@@ -42,4 +47,14 @@ const ServerException = Loadable({
   loading: Loading,
 })
 
-export { SignIn, Notification, Settings, Home, SignUp, NotFound, Forbidden, ServerException }
+export {
+  SignIn,
+  Notification,
+  DataView,
+  Settings,
+  Home,
+  SignUp,
+  NotFound,
+  Forbidden,
+  ServerException,
+}
